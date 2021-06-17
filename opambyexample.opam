@@ -1,0 +1,23 @@
+opam-version: "2.0"
+name: "ocamlbyexample"
+version: "~dev"
+synopsis: "OCaml by Example"
+maintainer: "David Wong <davidwong.crypto@gmail.com>"
+authors: "David Wong <davidwong.crypto@gmail.com>"
+license: "MIT License"
+homepage: "https://o1-labs.github.io/ocamlbyexample"
+bug-reports: "David Wong <davidwong.crypto@gmail.com>"
+depends: [
+  "core" {>= "0.12.1"}
+  "yojson" {>= "1.7.0"}
+  "jingoo" {>= "1.4.3"}
+]
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+]
+install: [make "install"]
+dev-repo: "git+https://"
+url {
+  src: "git+file:///home/jspada/projects/ocamlbyexample#main"
+}
